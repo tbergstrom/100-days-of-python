@@ -56,3 +56,78 @@ if year % 4 == 0:
         print("Not leap year.")
 else:
     print("Not leap year.")
+
+
+####################################### Pizza Ordering Practice  #######################################
+
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
+
+total = 0
+
+if size == "S":
+    if add_pepperoni == "Y":
+        total = 18
+    else:
+        total = 15
+elif size == "M":
+    if add_pepperoni == "Y":
+        total = 23
+    else:
+        total = 20
+elif size == "L":
+    if add_pepperoni == "Y":
+        total = 28
+    else:
+        total = 25
+
+if extra_cheese == "Y":
+    total += 1
+
+print(
+    f"Your final bill is: ${total}."
+)
+
+
+####################################### Love Calculator #######################################
+
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
+
+names = name1 + name2
+
+true_count = 0
+love_count = 0
+
+for letter in names:
+    for inner_letter in "TRUE":
+        if letter.upper() == inner_letter.upper():
+            true_count += 1
+    for inner_letter in "LOVE":
+        if letter.upper() == inner_letter.upper():
+            love_count += 1
+
+true_count *= 10
+total_count = true_count + love_count
+
+if total_count < 10 or total_count > 90:
+    print(f"Your score is {total_count}, you go together like coke and mentos.")
+elif 40 < total_count < 50:
+    print(f"Your score is {total_count}, you are alright together.")
+else:
+    print(f"Your score is {total_count}.")
+
+
+
+
